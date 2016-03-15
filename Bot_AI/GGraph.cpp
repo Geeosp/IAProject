@@ -125,12 +125,12 @@ vector<Vect*> GGraph::getPath(Vect* from, Vect* to){
 	startNode;
 	endNode;
 	
-	/*vector<GGraphNode*> nodesPath = AStar::getPath(startNode, endNode, &nodes,&edges);
+	vector<GGraphNode*> nodesPath = AStar::getPath(startNode, endNode, &nodes,&edges);
 	
 	for (unsigned int i = 0; i < nodesPath.size(); i++){
 		v.push_back(nodesPath.at(i)->getPos());
 	}
-	*/
+	
 	return v;
 
 

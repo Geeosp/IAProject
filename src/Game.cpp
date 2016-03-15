@@ -195,8 +195,8 @@ void Game::Update()
 	}
 
 
-	//playerBot->UpdateBot(GameManager::getBot(playerBot->getBotID()));
-	//defaultBot->UpdateBot(GameManager::getBot(defaultBot->getBotID()));
+	playerBot->UpdateBot(GameManager::getBot(playerBot->getBotID()));
+	defaultBot->UpdateBot(GameManager::getBot(defaultBot->getBotID()));
 	
 
 	float posX = 0.0f;
@@ -221,7 +221,7 @@ void Game::Update()
 
 	if (mouse->GetKeyState(AZUL_MOUSE::BUTTON_LEFT))
 	{
-		defaultBot->setGoal(posX,posY);
+		playerBot->setGoal(posX,posY);
 	}
 
 

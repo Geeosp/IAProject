@@ -22,7 +22,7 @@ public:
 	int getBotID();
 
 	Bot * getBot();
-	void printId(int x, int y);
+	//void printId(int x, int y);
 	void setGoal(float x, float y);
 
 private:

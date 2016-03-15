@@ -10,6 +10,7 @@ GeeoHeap::GeeoHeap()
 	capacity = 16;
 	heap = new GeeoHeapNode*[capacity];
 	memset(heap, (int)nullptr, sizeof(heap));
+	used = 0;
 		
 }
 
