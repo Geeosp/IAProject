@@ -7,7 +7,7 @@ class GGraphNode;
 class GGraphEdge
 {
 public:
-	GGraphEdge(GGraphNode* from, GGraphNode* to, float weight);
+	GGraphEdge(GGraphNode* from, GGraphNode* to);
 	~GGraphEdge();
 	void render(Camera * pCam);
 	GGraphNode* from;

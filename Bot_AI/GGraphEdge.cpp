@@ -1,11 +1,12 @@
 #include "GGraphEdge.h"
 
 
-GGraphEdge::GGraphEdge(GGraphNode* from, GGraphNode* to, float weight)
+GGraphEdge::GGraphEdge(GGraphNode* from, GGraphNode* to)
 {
 	this->from = from;
 	this->to = to;
-	this -> weight = weight;
+	this->weight = (*to->getPos() - *from->getPos()).mag();
+
 
 	Texture * text = new Texture("NavMeshNode.tga");
 	Image * image = new Image(text, new Rect(0, 0, 64, 64));

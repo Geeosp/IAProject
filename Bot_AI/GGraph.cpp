@@ -66,12 +66,12 @@ void GGraph::buildGraph()
 		points.push_back(*node->getPos() + *(new Vect(-delta, 0.f, 0.f)));
 		points.push_back(*node->getPos() + *(new Vect(0.f, -delta, 0.f)));
 		
-		/*
 		
 		points.push_back(*node->getPos() + *(new Vect(delta, delta, 0.f)));
 		points.push_back(*node->getPos() + *(new Vect(delta, -delta, 0.f)));
 		points.push_back(*node->getPos() + *(new Vect(-delta, delta, 0.f)));
 		points.push_back(*node->getPos() + *(new Vect(-delta, -delta, 0.f)));
+		/*
 		*/
 		Vect * pos = node->getPos();
 		vector<GGraphEdge*> nodeEdges;
@@ -82,7 +82,7 @@ void GGraph::buildGraph()
 				GGraphNode * from = node;
 				GGraphNode * to = nodes.find(getNodeId((int)v.X(), (int)v.Y()))->second;
 				if (!GameManager::isPathObstructed(0, *from->getPos(), *to->getPos())){
-					nodeEdges.push_back(new GGraphEdge(from, to, 1));
+					nodeEdges.push_back(new GGraphEdge(from, to));
 					DebugMsg::out("edge from:%d to :%d \n", from->getId(), to->getId());
 				}
 			}

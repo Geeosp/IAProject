@@ -41,6 +41,7 @@ vector<GGraphNode*> AStar::getPath(GGraphNode* from, GGraphNode* target, map<int
 	//a star algorithm
 	bool found = false;
 	while (!found&&!heap.isEmpty()){
+	//while (!heap.isEmpty()){
 		GEdgeHeapNode* heapNode = (GEdgeHeapNode* )heap.pop();
 		GGraphEdge* edge = heapNode->edge;
 		SearchState * searchStateFrom = &searchStates.find(edge->from->getId())->second;
@@ -49,7 +50,7 @@ vector<GGraphNode*> AStar::getPath(GGraphNode* from, GGraphNode* target, map<int
 		//distance to Node, from the first node of the path to the edge.to.
 		float distanceToNodeTo = searchStateFrom->dist+edge->getWeight();
 		//if distanceToNode< distances.find(edge.to/id))
-		if (distanceToNodeTo < searchStateTo->dist){
+		if (distanceToNodeTo <= searchStateTo->dist){
 			searchStateTo->dist = distanceToNodeTo;
 			searchStateTo->from = edge->from;
 			searchStateTo->closed = true;
