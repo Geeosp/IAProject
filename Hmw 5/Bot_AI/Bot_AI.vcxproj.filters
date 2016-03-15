@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Libs">
+      <UniqueIdentifier>{6a8acb8e-c5a2-48c6-9571-879d9c4318b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Your Bot">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Graph">
+      <UniqueIdentifier>{a137219a-c994-44b2-9436-400dd7672557}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BotController.h">
+      <Filter>Your Bot</Filter>
+    </ClInclude>
+    <ClInclude Include="GGraph.h">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="GGraphEdge.h">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="GGraphNode.h">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="GeeoHeap.h">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="GeeoHeapNode.h">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="AStar.h">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="GEdgeHeapNode.h">
+      <Filter>Graph</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BotController.cpp">
+      <Filter>Your Bot</Filter>
+    </ClCompile>
+    <ClCompile Include="GGraph.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="GGraphEdge.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="GGraphNode.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="GeeoHeap.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="AStar.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="GEdgeHeapNode.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
