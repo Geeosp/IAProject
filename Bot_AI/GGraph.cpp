@@ -114,9 +114,9 @@ void GGraph::render(Camera * pCam) {
 	*/
 
 }
-vector<Vect*> GGraph::getPath(Vect* from, Vect* to){
+list<Vect*> GGraph::getPath(Vect* from, Vect* to){
 	from; to;
-	vector<Vect*> v;
+	list<Vect*> v;
 	int fromId = getNodeId(from->X(), from->Y());
 	int toId = getNodeId(to->X(), to->Y());
 //	DebugMsg::out("trying to go :%d \n", fromId);

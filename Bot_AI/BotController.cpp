@@ -15,23 +15,10 @@ BotController::BotController(const int _botId)
 	bot = GameManager::getBot(botID);
 	Vect pos = bot->getPos();
 	goal = &pos;
-	path = new vector < Vect* > ;
+	path = new list < Vect* > ;
 	newGoal = false;
 	havePath = false;
-	/*
-
-	//graph = new myGraph();
-	regulateCoolDown = 2.0f;
-
-	Brain = new Goal_Think(this);
-
-	regulateTimer += regulateCoolDown;
-
-	timer = new Timer();
-	timer->tic();
-	CreatePOVGraph();
-	Brain->Arbitrate();
-	*/
+	
 }
 
 BotController::~BotController()
@@ -47,17 +34,28 @@ void BotController::UpdateBot(Bot * _bot)
 	if (newGoal){
 		DebugMsg::out("Path from (%f %f)", pos.X(), pos.Y());
 		DebugMsg::out("Path to (%f %f)\n", goal->X(), goal->Y());
-		vector<Vect*> newPath = graph->getPath(&pos, goal);
-		path = &newPath;
+		list<Vect*> newPath = graph->getPath(&pos, goal);
+		path->clear();
+		DebugMsg::out("newPath size: %d ", newPath.size());
+		unsigned int newSize = newPath.size();
+		for (unsigned int i = 0; i < newSize; i++){
+			path->push_back(newPath.front());
+			newPath.pop_front();
+		}
+		DebugMsg::out("Path size: %d ", path->size());
+
 		newGoal = false;
 	}
 
-	DebugMsg::out("Path size: %d\n", path->size());
 	if (!path->empty()){
-		DebugMsg::out("pathNotEmpty\n");
-		Vect* targ = path->at(5);
+		Vect* targ = path->front();
+		DebugMsg::out("Path size: %d ", path->size());
+		DebugMsg::out("distToTarget: %f\n", (*targ - pos).magSqr());
+		if ((*targ - pos).magSqr()< 1){
+			path->pop_front();
+		}
 		bot->MoveToPosition(*targ);
-		DebugMsg::out("going to position %f %f\n", targ->X(), targ->Y());
+	//	DebugMsg::out("going to position %f %f\n", targ->X(), targ->Y());
 	}
 
 }
@@ -66,6 +64,10 @@ void BotController::render(Camera * _pCam)
 {
 //	(void*)_pCam;
 	graph->render(_pCam);
+
+
+
+
 }
 
 int BotController::getBotID()
@@ -76,11 +78,7 @@ Bot * BotController::getBot()
 {
 	return bot;
 }
-/*
-void BotController::printId(int x, int y){
-	DebugMsg::out("mouse:(%d,%d)\n", x, y);
-}
-*/
+
 
 GGraph* BotController::getGraph() {
 	return this->graph;

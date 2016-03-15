@@ -71,13 +71,16 @@ vector<GGraphNode*> AStar::getPath(GGraphNode* from, GGraphNode* target, map<int
 		
 		while (p != from){
 			reversePath.push_back(p);
+			//path.push_back(p);
 			SearchState* s = &searchStates.find(p->getId())->second;
 			p = s->from;
 		}
+		
 		while (!reversePath.empty()){
 			path.push_back(reversePath.back());
 			reversePath.pop_back();
 		}
+		
 	}
 
 

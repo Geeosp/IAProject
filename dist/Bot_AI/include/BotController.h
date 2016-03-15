@@ -5,7 +5,7 @@
 
 // This is the class that you will add too
 #include "Bot.h"
-#include <vector>
+#include <list>
 #include "Timer.h"
 #include "GGraph.h"
 
@@ -31,7 +31,7 @@ private:
 	GGraph * graph;
 	Vect * goal;
 	bool newGoal;
-	vector<Vect*> *path;
+	list<Vect*> *path;
 	bool havePath;
 
 };

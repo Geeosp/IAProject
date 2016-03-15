@@ -12,6 +12,7 @@ public:
 	~GGraphNode();
 	int getId();
 	void render(Camera * pCam);
+	void renderPath(Camera * pCam);
 	Vect* getPos();
 
 private:
@@ -20,6 +21,7 @@ private:
 
 	GraphicsObject_Sprite * sprite;
 
+	GraphicsObject_Sprite * spritePath;
 
 
 

@@ -23,7 +23,7 @@ public:
 	map<int, GGraphNode*> nodes;
 	map<int,vector<GGraphEdge*>> edges;
 
-	vector<Vect*> getPath(Vect* from, Vect* to);
+	list<Vect*> getPath(Vect* from, Vect* to);
 	void render(Camera * pCam);
 	static int getNodeId(const int x, const int y);
 	static int getNodeId(const float x, const float y);
