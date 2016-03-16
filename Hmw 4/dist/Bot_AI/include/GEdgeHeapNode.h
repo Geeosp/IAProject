@@ -13,12 +13,13 @@ public:
 	GEdgeHeapNode();
 	~GEdgeHeapNode();
 	float getWeight();
-	GEdgeHeapNode(GGraphEdge* edge, GGraphNode * target);
-	
+	GEdgeHeapNode(GGraphEdge* edge, GGraphNode * target, float distToNode0);
 	GGraphEdge* edge;//edge to be avaluated
 	GGraphNode * target;//final node target
+	float distToNode0;
 private:
-	float calculateHeuristic();
+	//float calculateHeuristic();
+
 
 
 };

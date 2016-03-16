@@ -32,8 +32,8 @@ void BotController::UpdateBot(Bot * _bot)
 	
 	Vect  pos = bot->getPos();
 	if (newGoal){
-		DebugMsg::out("Path from (%f %f)", pos.X(), pos.Y());
-		DebugMsg::out("Path to (%f %f)\n", goal->X(), goal->Y());
+		//DebugMsg::out("Path from (%f %f)", pos.X(), pos.Y());
+		//DebugMsg::out("Path to (%f %f)\n", goal->X(), goal->Y());
 		list<Vect*> newPath = graph->getPath(&pos, goal);
 		path->clear();
 		DebugMsg::out("newPath size: %d ", newPath.size());
@@ -49,9 +49,9 @@ void BotController::UpdateBot(Bot * _bot)
 
 	if (!path->empty()){
 		Vect* targ = path->front();
-		DebugMsg::out("Path size: %d ", path->size());
-		DebugMsg::out("distToTarget: %f\n", (*targ - pos).magSqr());
-		if ((*targ - pos).magSqr()< 1){
+	//	DebugMsg::out("Path size: %d ", path->size());
+	//	DebugMsg::out("distToTarget: %f\n", (*targ - pos).magSqr());
+		if ((*targ - pos).magSqr()< 2.f){
 			path->pop_front();
 		}
 		bot->MoveToPosition(*targ);

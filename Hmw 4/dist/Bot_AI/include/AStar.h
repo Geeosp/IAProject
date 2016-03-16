@@ -11,15 +11,19 @@ class GGraphNode;
 class GGraphEdge;
 class GeeoHeapNode;
 class GEdgeHeapNode;
-
+enum SearchStateList{
+	OPEN,CLOSED
+};
 
 struct SearchState{
-	float dist;
-	bool closed;
+	float distFromNode0;
+	float distFromNode0ToTarget;//heuristic
+	SearchStateList state;
 	GGraphNode* from;
-	SearchState(float dist, bool closed, GGraphNode* from){
-		this->dist = dist;//distance to this node;
-		this->closed = closed;//if the distance is final;
+	SearchState(GGraphNode* from, float distFromNode0, float distFromNode0ToTarget, SearchStateList state){
+		this->distFromNode0 = distFromNode0;//distance to this node;
+		this->distFromNode0ToTarget = distFromNode0ToTarget;
+		this->state = state;//if the distance is final;
 		this->from = from;//the node who leads to this distance
 	}
 };
@@ -33,7 +37,7 @@ public:
 	~AStar();
 	static 	vector<GGraphNode*> getPath(GGraphNode* from, GGraphNode* target, map<int, GGraphNode*>* nodes,
 	map<int, vector<GGraphEdge*>> *edges);
-
+	static float AStar::calculateHeuristic(GGraphNode *from, GGraphNode* to);
 
 private:
 	

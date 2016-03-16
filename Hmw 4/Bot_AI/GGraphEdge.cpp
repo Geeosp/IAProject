@@ -5,7 +5,7 @@ GGraphEdge::GGraphEdge(GGraphNode* from, GGraphNode* to)
 {
 	this->from = from;
 	this->to = to;
-	this->weight = (*to->getPos() - *from->getPos()).mag();
+	
 
 
 	Texture * text = new Texture("NavMeshNode.tga");
@@ -73,7 +73,7 @@ GGraphEdge::GGraphEdge(GGraphNode* from, GGraphNode* to)
 
 float GGraphEdge::getWeight()
 {
-	return this->weight;
+	return  (*to->getPos() - *from->getPos()).magSqr();
 }
 GGraphEdge::~GGraphEdge()
 {
