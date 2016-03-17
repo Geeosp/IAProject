@@ -46,7 +46,7 @@ GGoalStatus GoalGetALife::process()
 	while (!subGoals.empty() && (subGoals.front()->isComplete() || subGoals.front()->hasFailed())){
 		subGoals.pop_front();
 	}
-	if (subGoals.empty()){
+	if (goalStatus == ACTIVE && subGoals.empty()){
 		goalStatus = COMPLETED;
 	}else{
 		GGoalStatus lastStatus = subGoals.front()->process();
@@ -59,7 +59,9 @@ GGoalStatus GoalGetALife::process()
 
 
 void GoalGetALife::terminate(){
-
+	DebugMsg::out("terminating: ");
+	DebugMsg::out(toString());
+	DebugMsg::out("\n");
 }
 void GoalGetALife::addSubGoal(GCompositeGoal* newGoal){
 	newGoal;

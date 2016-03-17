@@ -2,6 +2,7 @@
 #ifndef GEEO_BRAIN
 #define GEEO_BRAIN
 #include <list>
+#include <vector>
 //#include "Bot.h"
 
 using namespace std;
@@ -33,6 +34,7 @@ private:
 	int getBotRocketAmno();
 	float getEnemyDistance();
 	list<GCompositeGoal*> subgoals;
+	vector<GCompositeGoal*> parallelgoals;
 	void clearGoals();
 	void changeToThisGoal(GCompositeGoal* newGoal);
 	void queueGoal(GCompositeGoal* newGoal);

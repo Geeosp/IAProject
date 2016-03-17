@@ -31,3 +31,6 @@ void GCompositeGoal::activateIfInactive(){
 GGoalType GCompositeGoal::getType(){
 	return this->type;
 }
+void GCompositeGoal::desactivate(){
+	this->goalStatus = INACTIVE;
+}

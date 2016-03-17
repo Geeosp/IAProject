@@ -31,12 +31,14 @@ public:
 	GGoalType getType();//ok
 	virtual char* toString()=0;
 	void activateIfInactive();
+	void desactivate();
 protected:
 	BotController * botControl;
-	Bot * bot;
+	//Bot * bot;
 	GGoalType type;
 	GGoalStatus goalStatus;
 	list<GCompositeGoal*>  subGoals;
+
 
 };
 

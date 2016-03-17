@@ -22,6 +22,7 @@ GGoalStatus GGoalFollowPath::process(){
 	Bot* bot = botControl->getBot();
 	list<Vect*>* path = botControl->getPath();
 	Vect pos = botControl->getBot()->getPos();
+	
 	if (!path->empty()){
 		Vect* targ = path->front();
 		if ((*targ - pos).magSqr()< 2.f){

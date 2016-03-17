@@ -12,7 +12,10 @@ enum GGoalType
 	SEARCHFORRIFLE,
 	SEARCHFORLASER,
 	CALCULEPATH, 
-	FOLOWPATH	
+	FOLOWPATH,
+	ATACK,
+	HUNT,
+	WONDER
 };
 
 enum GGoalStatus
@@ -21,7 +24,6 @@ enum GGoalStatus
 	ACTIVE,
 	COMPLETED,
 	FAILED
-
 };
 
 

@@ -68,8 +68,19 @@
     <ClInclude Include="GGoalCalculatePathTo.h">
       <Filter>GoalDrivenBehavior\Atomics</Filter>
     </ClInclude>
-    <ClInclude Include="GGoalFollowPath.h" />
-    <ClInclude Include="GGoalGetRifleAmno.h" />
+    <ClInclude Include="GGoalGetRifleAmno.h">
+      <Filter>GoalDrivenBehavior</Filter>
+    </ClInclude>
+    <ClInclude Include="GGoalFollowPath.h">
+      <Filter>GoalDrivenBehavior\Atomics</Filter>
+    </ClInclude>
+    <ClInclude Include="GGoalGetLaserAmno.h">
+      <Filter>GoalDrivenBehavior</Filter>
+    </ClInclude>
+    <ClInclude Include="GGoalAtack.h">
+      <Filter>GoalDrivenBehavior</Filter>
+    </ClInclude>
+    <ClInclude Include="GGoalHunt.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BotController.cpp">
@@ -108,10 +119,19 @@
     <ClCompile Include="GGoalCalculatePathTo.cpp">
       <Filter>GoalDrivenBehavior\Atomics</Filter>
     </ClCompile>
-    <ClCompile Include="GGoalFollowPath.cpp">
-      <Filter>Your Bot</Filter>
-    </ClCompile>
     <ClCompile Include="GGoalGetRifleAmno.cpp">
+      <Filter>GoalDrivenBehavior</Filter>
+    </ClCompile>
+    <ClCompile Include="GGoalFollowPath.cpp">
+      <Filter>GoalDrivenBehavior\Atomics</Filter>
+    </ClCompile>
+    <ClCompile Include="GGoalGetLaserAmno.cpp">
+      <Filter>GoalDrivenBehavior</Filter>
+    </ClCompile>
+    <ClCompile Include="GGoalAtack.cpp">
+      <Filter>GoalDrivenBehavior</Filter>
+    </ClCompile>
+    <ClCompile Include="GGoalHunt.cpp">
       <Filter>Your Bot</Filter>
     </ClCompile>
   </ItemGroup>

@@ -44,5 +44,5 @@ void GGoalCalculatePathTo::addSubGoal(GCompositeGoal* newGoal){
 
 }
 char* GGoalCalculatePathTo::toString(){
-	return "Base_Goal";
+	return "CalculatePath";
 }

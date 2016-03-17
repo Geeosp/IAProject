@@ -24,7 +24,7 @@ void GGoalGetRifleAmno::activate(){
 	bool found = false;
 	for (unsigned int i = 0; i < items.size() && !found; i++){
 		ItemDrop item = items[i];
-		if (item.type == ITEM_TYPE::HEALTH){
+		if (item.type == ITEM_TYPE::RIFLE_AMMO){
 			Vect* itemPos = new Vect(item.pos.X(), item.pos.Y(), 0.f, 1.f);
 			GGoalCalculatePathTo * calculatePath = new GGoalCalculatePathTo(botControl, GGoalStatus::INACTIVE, itemPos);
 			subGoals.push_back(calculatePath);
@@ -67,5 +67,5 @@ void GGoalGetRifleAmno::addSubGoal(GCompositeGoal* newGoal){
 	subGoals.push_back(newGoal);
 }
 char* GGoalGetRifleAmno::toString(){
-	return "Get A Life";
+	return "GetRifle";
 }

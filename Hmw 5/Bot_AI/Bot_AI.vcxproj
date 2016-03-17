@@ -95,11 +95,14 @@ copy  *.h ..\dist\Bot_AI\include\.</Command>
     <ClInclude Include="GCompositeGoal.h" />
     <ClInclude Include="GGoalFollowPath.h" />
     <ClInclude Include="GGoalGetALife.h" />
+    <ClInclude Include="GGoalGetLaserAmno.h" />
     <ClInclude Include="GGoalGetRifleAmno.h" />
+    <ClInclude Include="GGoalHunt.h" />
     <ClInclude Include="GGoalTypes.h" />
     <ClInclude Include="GGraph.h" />
     <ClInclude Include="GGraphEdge.h" />
     <ClInclude Include="GGraphNode.h" />
+    <ClInclude Include="GGoalAtack.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AStar.cpp" />
@@ -112,10 +115,13 @@ copy  *.h ..\dist\Bot_AI\include\.</Command>
     <ClCompile Include="GCompositeGoal.cpp" />
     <ClCompile Include="GGoalFollowPath.cpp" />
     <ClCompile Include="GGoalGetALife.cpp" />
+    <ClCompile Include="GGoalGetLaserAmno.cpp" />
     <ClCompile Include="GGoalGetRifleAmno.cpp" />
+    <ClCompile Include="GGoalHunt.cpp" />
     <ClCompile Include="GGraph.cpp" />
     <ClCompile Include="GGraphEdge.cpp" />
     <ClCompile Include="GGraphNode.cpp" />
+    <ClCompile Include="GGoalAtack.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
