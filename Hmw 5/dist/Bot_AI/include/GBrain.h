@@ -36,7 +36,8 @@ private:
 	void clearGoals();
 	void changeToThisGoal(GCompositeGoal* newGoal);
 	void queueGoal(GCompositeGoal* newGoal);
-
+	bool enemyIsInBulletRange();
+	bool enemyIsInSight();
 
 
 };

@@ -25,3 +25,6 @@ void BaseGoal::addSubGoal(GCompositeGoal* newGoal){
 	newGoal;
 
 }
+char* BaseGoal::toString(){
+	return "Base_Goal";
+}

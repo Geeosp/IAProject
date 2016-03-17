@@ -17,7 +17,7 @@ public:
 	GGoalStatus process();
 	void terminate() ;
 	 void  addSubGoal(GCompositeGoal * newGoal);
-
+	 char* toString();
 };
 
 

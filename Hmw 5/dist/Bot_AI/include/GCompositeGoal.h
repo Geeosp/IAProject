@@ -29,7 +29,7 @@ public:
 	bool isInactive();//ok
 	bool hasFailed();//ok
 	GGoalType getType();//ok
-
+	virtual char* toString()=0;
 protected:
 	BotController * botControl;
 	Bot * bot;
