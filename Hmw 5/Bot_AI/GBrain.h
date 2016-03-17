@@ -9,8 +9,8 @@ using namespace std;
 
 class BotController;
 class Bot;
+//class BaseGoal;
 class GCompositeGoal;
-class BaseGoal;
 
 
 
@@ -33,7 +33,9 @@ private:
 	int getBotRocketAmno();
 	float getEnemyDistance();
 	list<GCompositeGoal*> subgoals;
-
+	void clearGoals();
+	void changeToThisGoal(GCompositeGoal* newGoal);
+	void queueGoal(GCompositeGoal* newGoal);
 
 
 

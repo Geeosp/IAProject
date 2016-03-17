@@ -18,11 +18,20 @@ void GBrain::think(){
 	BaseGoal* goal2 = new BaseGoal(botController, GGoalStatus::INACTIVE);
 	//goal;
 	goal2;
+	changeToThisGoal(goal2);
 		DebugMsg::out("Need to get a life\n");
 	}
 }
 
 void GBrain::process(){
+	if (!subgoals.empty()){
+GCompositeGoal* currentGoal = subgoals.front();
+	
+currentGoal;
+	
+	
+	}
+
 }
 
 int GBrain::getBotLife(){
@@ -39,4 +48,13 @@ int GBrain::getBotRocketAmno(){
 }
 float GBrain::getEnemyDistance(){
 	return (bot->getPos() - GameManager::getEnemyPos(bot->getID())).mag();
+}
+void GBrain::clearGoals(){
+	subgoals.clear();
+}
+void GBrain::changeToThisGoal(GCompositeGoal* newGoal){
+	subgoals.push_front(newGoal);
+}
+void GBrain::queueGoal(GCompositeGoal* newGoal){
+	subgoals.push_back(newGoal);
 }
