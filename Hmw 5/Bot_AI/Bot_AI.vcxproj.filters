@@ -65,7 +65,11 @@
     <ClInclude Include="Defs.h">
       <Filter>GoalDrivenBehavior</Filter>
     </ClInclude>
-    <ClInclude Include="GGoalCalculatePathTo.h" />
+    <ClInclude Include="GGoalCalculatePathTo.h">
+      <Filter>GoalDrivenBehavior\Atomics</Filter>
+    </ClInclude>
+    <ClInclude Include="GGoalFollowPath.h" />
+    <ClInclude Include="GGoalGetRifleAmno.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BotController.cpp">
@@ -102,6 +106,12 @@
       <Filter>GoalDrivenBehavior</Filter>
     </ClCompile>
     <ClCompile Include="GGoalCalculatePathTo.cpp">
+      <Filter>GoalDrivenBehavior\Atomics</Filter>
+    </ClCompile>
+    <ClCompile Include="GGoalFollowPath.cpp">
+      <Filter>Your Bot</Filter>
+    </ClCompile>
+    <ClCompile Include="GGoalGetRifleAmno.cpp">
       <Filter>Your Bot</Filter>
     </ClCompile>
   </ItemGroup>

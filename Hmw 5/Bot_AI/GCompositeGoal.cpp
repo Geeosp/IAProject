@@ -24,8 +24,8 @@ bool GCompositeGoal::hasFailed(){
 	return goalStatus == GGoalStatus::FAILED;
 }
 void GCompositeGoal::activateIfInactive(){
-	if (goalStatus == INACTIVE){
-		activate();
+	if (isInactive()){
+		activate(); goalStatus = ACTIVE;
 	}
 }
 GGoalType GCompositeGoal::getType(){

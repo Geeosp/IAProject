@@ -46,7 +46,7 @@ vector<GGraphNode*> AStar::getPath(GGraphNode* from, GGraphNode* target, map<int
 		GGraphNode *currentNode = graphNodes->find(edge->to->getId())->second;
 		SearchState * searchStateCurrent = &searchStates.find(currentNode->getId())->second;
 		if (searchStateCurrent->state == SearchStateList::OPEN){
-			DebugMsg::out("AStar trying node: %d\n", currentNode->getId());
+		//	DebugMsg::out("AStar trying node: %d\n", currentNode->getId());
 			searchStateCurrent->state = SearchStateList::CLOSED;
 			SearchState * searchStateFrom = &searchStates.find(edge->from->getId())->second;
 			searchStateCurrent->distFromNode0 = searchStateFrom->distFromNode0 + edge->getWeight();

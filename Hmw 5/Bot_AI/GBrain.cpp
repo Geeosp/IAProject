@@ -20,8 +20,7 @@ GBrain::~GBrain()
 void GBrain::think(){
 	DebugMsg::out("Thinking\n");
 
-	if (getBotLife() < 100){
-
+	if (getBotLife() <=50){
 		GoalGetALife* goal = new GoalGetALife(botController, GGoalStatus::INACTIVE);
 		changeToThisGoal(goal);
 		DebugMsg::out("Need to get a life\n");
@@ -46,10 +45,15 @@ void GBrain::process(){
 	if (!subgoals.empty()){
 	GCompositeGoal* currentGoal = subgoals.front();
 	currentGoal->process();
-	DebugMsg::out(currentGoal->toString());
-	DebugMsg::out("\n");
-
+	if (currentGoal->isComplete() || currentGoal->hasFailed()){
+		currentGoal->terminate();
+		subgoals.pop_front();
+		}
 	}
+	else{
+		think();
+	}
+	DebugMsg::out("\n");
 }
 
 int GBrain::getBotLife(){//ok
@@ -68,16 +72,26 @@ void GBrain::clearGoals(){//ok
 	subgoals.clear();
 }
 void GBrain::changeToThisGoal(GCompositeGoal* newGoal){//ok
+
 	if (subgoals.empty()){
-		subgoals.push_front(newGoal);		
-	}else if (!subgoals.front()->getType() == newGoal->getType()){
+		subgoals.push_front(newGoal);	
+		DebugMsg::out("Adding ");
+		DebugMsg::out(newGoal->toString());
+		DebugMsg::out("\n");
+	}else if (subgoals.front()->getType() != newGoal->getType()){
 		subgoals.push_front(newGoal);
+		DebugMsg::out("Adding ");
+		DebugMsg::out(newGoal->toString());
+		DebugMsg::out("\n");
 	}
 	
 
 }
 void GBrain::queueGoal(GCompositeGoal* newGoal){//ok
 	subgoals.push_back(newGoal);
+	DebugMsg::out("Queueing ");
+	DebugMsg::out(newGoal->toString());
+	DebugMsg::out("\n");
 }
 bool GBrain::enemyIsInBulletRange(){//ok
 	Vect enemyPos = GameManager::getEnemyPos(bot->getID());
