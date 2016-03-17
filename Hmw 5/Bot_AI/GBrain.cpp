@@ -3,7 +3,7 @@
 #include "BaseGoal.h"
 #include "GGoalGetALife.h"
 #include "Defs.h"
-
+#include "GGoalTypes.h"
 
 
 
@@ -20,7 +20,13 @@ GBrain::~GBrain()
 void GBrain::think(){
 	DebugMsg::out("Thinking\n");
 
-	if (getBotLife() > 60){
+	if (getBotLife() < 100){
+
+		GoalGetALife* goal = new GoalGetALife(botController, GGoalStatus::INACTIVE);
+		changeToThisGoal(goal);
+		DebugMsg::out("Need to get a life\n");
+	}
+	/*if (getBotLife() > 60){
 		//TODO:add hunt enemy		
 	}
 	else{
@@ -33,12 +39,13 @@ void GBrain::think(){
 	if (enemyIsInBulletRange()){
 		//fireBullet;
 	}
+	*/
 }
 
 void GBrain::process(){
 	if (!subgoals.empty()){
 	GCompositeGoal* currentGoal = subgoals.front();
-	currentGoal;
+	currentGoal->process();
 	DebugMsg::out(currentGoal->toString());
 	DebugMsg::out("\n");
 
@@ -61,7 +68,13 @@ void GBrain::clearGoals(){//ok
 	subgoals.clear();
 }
 void GBrain::changeToThisGoal(GCompositeGoal* newGoal){//ok
-	subgoals.push_front(newGoal);
+	if (subgoals.empty()){
+		subgoals.push_front(newGoal);		
+	}else if (!subgoals.front()->getType() == newGoal->getType()){
+		subgoals.push_front(newGoal);
+	}
+	
+
 }
 void GBrain::queueGoal(GCompositeGoal* newGoal){//ok
 	subgoals.push_back(newGoal);

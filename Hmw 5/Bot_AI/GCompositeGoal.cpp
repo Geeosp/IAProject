@@ -23,3 +23,11 @@ bool GCompositeGoal::isInactive(){
 bool GCompositeGoal::hasFailed(){
 	return goalStatus == GGoalStatus::FAILED;
 }
+void GCompositeGoal::activateIfInactive(){
+	if (goalStatus == INACTIVE){
+		activate();
+	}
+}
+GGoalType GCompositeGoal::getType(){
+	return this->type;
+}

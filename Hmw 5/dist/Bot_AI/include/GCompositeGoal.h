@@ -30,6 +30,7 @@ public:
 	bool hasFailed();//ok
 	GGoalType getType();//ok
 	virtual char* toString()=0;
+	void activateIfInactive();
 protected:
 	BotController * botControl;
 	Bot * bot;

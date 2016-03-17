@@ -65,6 +65,7 @@
     <ClInclude Include="Defs.h">
       <Filter>GoalDrivenBehavior</Filter>
     </ClInclude>
+    <ClInclude Include="GGoalCalculatePathTo.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BotController.cpp">
@@ -99,6 +100,9 @@
     </ClCompile>
     <ClCompile Include="GBrain.cpp">
       <Filter>GoalDrivenBehavior</Filter>
+    </ClCompile>
+    <ClCompile Include="GGoalCalculatePathTo.cpp">
+      <Filter>Your Bot</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
