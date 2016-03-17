@@ -120,18 +120,19 @@ list<Vect*> GGraph::getPath(Vect* from, Vect* to){
 	list<Vect*> v;
 	int fromId = getNodeId(from->X(), from->Y());
 	int toId = getNodeId(to->X(), to->Y());
-//	DebugMsg::out("trying to go :%d \n", fromId);
-	GGraphNode* startNode = nodes.find(fromId)->second;
-	GGraphNode* endNode = nodes.find(toId)->second;
-	startNode;
-	endNode;
-	
-	vector<GGraphNode*> nodesPath = AStar::getPath(startNode, endNode, &nodes,&edges);
-	
-	for (unsigned int i = 0; i < nodesPath.size(); i++){
-		v.push_back(nodesPath.at(i)->getPos());
+		DebugMsg::out("trying to go :%d \n", fromId);
+	if (toId != -1 && fromId != -1){
+		GGraphNode* startNode = nodes.find(fromId)->second;
+		GGraphNode* endNode = nodes.find(toId)->second;
+		startNode;
+		endNode;
+
+		vector<GGraphNode*> nodesPath = AStar::getPath(startNode, endNode, &nodes, &edges);
+
+		for (unsigned int i = 0; i < nodesPath.size(); i++){
+			v.push_back(nodesPath.at(i)->getPos());
+		}
 	}
-	
 	return v;
 
 

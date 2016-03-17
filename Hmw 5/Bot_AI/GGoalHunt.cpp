@@ -24,8 +24,9 @@ void GGoalHunt::activate(){
 	DebugMsg::out("Activating: ");
 	subGoals.clear();
 	goalStatus = ACTIVE;
-	Vect enemyPos = GameManager::getEnemyPos(botControl->getBotID());
-	GGoalCalculatePathTo * calculatePath = new GGoalCalculatePathTo(botControl, GGoalStatus::INACTIVE, &enemyPos);
+	Vect enemy = GameManager::getEnemyPos(botControl->getBotID());
+	Vect* enemyPos = new Vect(enemy.X(), enemy.Y(),enemy.Z(), enemy.W());
+	GGoalCalculatePathTo * calculatePath = new GGoalCalculatePathTo(botControl, GGoalStatus::INACTIVE, enemyPos);
 	subGoals.push_back(calculatePath);
 	GGoalFollowPath * followPath = new GGoalFollowPath(botControl, GGoalStatus::INACTIVE);
 	subGoals.push_back(followPath);
@@ -35,8 +36,8 @@ void GGoalHunt::activate(){
 
 GGoalStatus GGoalHunt::process()
 {
-	counter;
-	if (counter > 30){
+	counter++;
+	if (counter > 600){
 		activate();
 	}
 	DebugMsg::out(toString());

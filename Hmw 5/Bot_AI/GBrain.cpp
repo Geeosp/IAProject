@@ -5,6 +5,7 @@
 #include "GGoalGetLaserAmno.h"
 #include "GGoalGetRifleAmno.h"
 #include "GGoalAtack.h"
+#include "GGoalHunt.h"
 #include "Defs.h"
 #include "GGoalTypes.h"
 #include <list>
@@ -39,10 +40,15 @@ void GBrain::think(){
 			hasRiffle = true;
 		}
 		else if (item.type == ITEM_TYPE::LASER_AMMO){
-			hasLaser = TRUE;
+			hasLaser = true;
 		}
 	}
-	
+	if (!hasLaser&&!hasRiffle&&!hasHealth){
+		if (getEnemyDistance() > HUNTDISTANCE){
+			GGoalHunt* goal = new GGoalHunt(botController, GGoalStatus::ACTIVE);
+			changeToThisGoal(goal);
+		}
+	}
 	if (hasLaser){
 		GGoalGetLaserAmno* goal = new GGoalGetLaserAmno(botController, GGoalStatus::INACTIVE);
 		changeToThisGoal(goal);
