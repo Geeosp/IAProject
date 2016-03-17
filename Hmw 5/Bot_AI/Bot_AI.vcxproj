@@ -103,6 +103,7 @@ copy  *.h ..\dist\Bot_AI\include\.</Command>
     <ClInclude Include="GGraphEdge.h" />
     <ClInclude Include="GGraphNode.h" />
     <ClInclude Include="GGoalAtack.h" />
+    <ClInclude Include="GGoalWander.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AStar.cpp" />
@@ -122,6 +123,7 @@ copy  *.h ..\dist\Bot_AI\include\.</Command>
     <ClCompile Include="GGraphEdge.cpp" />
     <ClCompile Include="GGraphNode.cpp" />
     <ClCompile Include="GGoalAtack.cpp" />
+    <ClCompile Include="GGoalWander.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

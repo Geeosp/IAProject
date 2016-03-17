@@ -6,6 +6,7 @@
 #include "GGoalGetRifleAmno.h"
 #include "GGoalAtack.h"
 #include "GGoalHunt.h"
+#include "GGoalWander.h"
 #include "Defs.h"
 #include "GGoalTypes.h"
 #include <list>
@@ -48,6 +49,10 @@ void GBrain::think(){
 			GGoalHunt* goal = new GGoalHunt(botController, GGoalStatus::ACTIVE);
 			changeToThisGoal(goal);
 		}
+		else{
+		//	GGoalWander* goal = new GGoalWander(botController, GGoalStatus::ACTIVE);
+			//changeToThisGoal(goal);
+		}
 	}
 	if (hasLaser){
 		GGoalGetLaserAmno* goal = new GGoalGetLaserAmno(botController, GGoalStatus::INACTIVE);
@@ -58,7 +63,7 @@ void GBrain::think(){
 		changeToThisGoal(goal);
 	}
 	if (hasHealth){
-		if (getBotLife() <= 50){
+		if (getBotLife() <= 50||getBotLife()<GameManager::getEnemyHealth(bot->getID())){
 			GoalGetALife* goal = new GoalGetALife(botController, GGoalStatus::INACTIVE);
 			changeToThisGoal(goal);
 		}

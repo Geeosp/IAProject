@@ -80,7 +80,12 @@
     <ClInclude Include="GGoalAtack.h">
       <Filter>GoalDrivenBehavior</Filter>
     </ClInclude>
-    <ClInclude Include="GGoalHunt.h" />
+    <ClInclude Include="GGoalHunt.h">
+      <Filter>GoalDrivenBehavior</Filter>
+    </ClInclude>
+    <ClInclude Include="GGoalWander.h">
+      <Filter>GoalDrivenBehavior</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BotController.cpp">
@@ -132,7 +137,10 @@
       <Filter>GoalDrivenBehavior</Filter>
     </ClCompile>
     <ClCompile Include="GGoalHunt.cpp">
-      <Filter>Your Bot</Filter>
+      <Filter>GoalDrivenBehavior</Filter>
+    </ClCompile>
+    <ClCompile Include="GGoalWander.cpp">
+      <Filter>GoalDrivenBehavior</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
