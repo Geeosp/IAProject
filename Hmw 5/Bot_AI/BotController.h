@@ -35,7 +35,7 @@ private:
 	bool havePath;
 	GBrain* brain;
 	Timer * timer;
-	float regulateCoolDown;
+	
 	float regulateTimer;
 
 };

@@ -18,6 +18,8 @@ GBrain::~GBrain()
 {
 }
 void GBrain::think(){
+	DebugMsg::out("Thinking\n");
+
 	if (getBotLife() > 60){
 		//TODO:add hunt enemy		
 	}

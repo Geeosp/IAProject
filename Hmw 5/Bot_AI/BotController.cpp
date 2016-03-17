@@ -1,5 +1,5 @@
 #include "BotController.h"
-
+#include "Defs.h"
 
 
 BotController::BotController(const int botId) 
