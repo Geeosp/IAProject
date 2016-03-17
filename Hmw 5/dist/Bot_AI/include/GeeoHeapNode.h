@@ -1,3 +1,4 @@
+#pragma once
 #ifndef GEEO_HEAPNODE
 #define GEEO_HEAPNODE
 

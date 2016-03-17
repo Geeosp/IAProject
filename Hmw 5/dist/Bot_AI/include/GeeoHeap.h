@@ -2,6 +2,8 @@
 #ifndef GEEO_HEAP
 #define GEEO_HEAP
 #include <vector>
+#include <iostream>
+#include <math.h>
 #include "GeeoHeapNode.h"
 
 //template <T>

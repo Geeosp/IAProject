@@ -1,32 +1,34 @@
+#pragma once
 #ifndef GGOAL_H
 #define GGOAL_H
 
-#include "GGoalTypes.h"
+#include <list>
 #include "Bot.h"
 #include "BotController.h"
-#include <list>
+#include "GGoalTypes.h"
 
-class BotController;
-class Bot;
 using namespace std;
+class Bot;
+class BotController;
+
+
+
 class GCompositeGoal
 {
-
 public:
 	GCompositeGoal(BotController * _botControl, GGoalType goalType, GGoalStatus goalStatus);
-
-	virtual ~GCompositeGoal();
-
-	virtual void Activate() = 0;
-	virtual GGoalStatus Process() = 0;
-	virtual void Terminate() = 0;
-
-	void AddSubGoal(GCompositeGoal * newGoal);//ok
+	~GCompositeGoal();
+	virtual void activate() = 0;
+	virtual GGoalStatus process() = 0;
+	virtual void terminate() = 0;
+	virtual void  addSubGoal(GCompositeGoal * newGoal) = 0;
+	/*
+	*/
 	bool isComplete();//ok
 	bool isActive();//ok
 	bool isInactive();//ok
 	bool hasFailed();//ok
-	GGoalType getType();
+	GGoalType getType();//ok
 
 protected:
 	BotController * botControl;

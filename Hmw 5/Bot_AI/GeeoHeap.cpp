@@ -1,6 +1,5 @@
 #include "GeeoHeap.h"
-#include <iostream>
-#include <math.h>
+
 using namespace std;
 //template <class T>
 //GeeoHeap<T>::GeeoHeap()

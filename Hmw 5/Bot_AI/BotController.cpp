@@ -1,24 +1,21 @@
 #include "BotController.h"
-//#include "myGraph.h"
-//#include "myGraphNode.h"
-#include "GameManager.h"
-//#include "Graph_SearchAStar.h"
-//#include "AStarHeuristicPolicies.h"
-#include "Vect.h"
-//#include "Goal_Think.h"
 
-BotController::BotController(const int _botId) 
+
+
+BotController::BotController(const int botId) 
 {
-	(void*)(_botId);
 	this->graph = new GGraph();
-	botID = _botId;
-	bot = GameManager::getBot(botID);
+	this->botID = botId;
+	this->bot = GameManager::getBot(botID);
 	Vect pos = bot->getPos();
-	goal = &pos;
-	path = new list < Vect* > ;
-	newGoal = false;
-	havePath = false;
-	
+	this->goal = &pos;
+	this->path = new list < Vect* > ;
+	this->newGoal = false;
+	this->havePath = false;
+	this->brain = new GBrain(bot, this);
+	this->timer = new Timer();
+	this->timer->tic();
+
 }
 
 BotController::~BotController()
@@ -30,10 +27,20 @@ void BotController::UpdateBot(Bot * _bot)
 {
 	(void)_bot;
 	
+	Time_Engine time = timer->toc();
+	float curTime = Time_Engine::quotientFloat(time, Time_Engine(TIME_ONE_MILLISECOND)) / 1000;
+
+	if (curTime > regulateTimer)
+	{
+		brain->think();
+
+		regulateTimer = curTime + regulateCoolDown;
+	}
+	brain->process();
+
+	/*
 	Vect  pos = bot->getPos();
 	if (newGoal){
-		//DebugMsg::out("Path from (%f %f)", pos.X(), pos.Y());
-		//DebugMsg::out("Path to (%f %f)\n", goal->X(), goal->Y());
 		list<Vect*> newPath = graph->getPath(&pos, goal);
 		path->clear();
 		DebugMsg::out("newPath size: %d ", newPath.size());
@@ -49,21 +56,18 @@ void BotController::UpdateBot(Bot * _bot)
 
 	if (!path->empty()){
 		Vect* targ = path->front();
-	//	DebugMsg::out("Path size: %d ", path->size());
-	//	DebugMsg::out("distToTarget: %f\n", (*targ - pos).magSqr());
 		if ((*targ - pos).magSqr()< 2.f){
 			path->pop_front();
 		}
 		bot->MoveToPosition(*targ);
-	//	DebugMsg::out("going to position %f %f\n", targ->X(), targ->Y());
 	}
-
+	*/
 }
 
 void BotController::render(Camera * _pCam)
 {
-//	(void*)_pCam;
-	graph->render(_pCam);
+	(void*)_pCam;
+//	graph->render(_pCam);
 
 
 
@@ -93,4 +97,8 @@ void BotController::setGoal(float x, float y){
 	newGoal = true;
 	DebugMsg::out("setGoal :%f %f\n",x,y );
 	}
+}
+
+list<Vect*> * BotController::getPath(){
+	return this->path;
 }

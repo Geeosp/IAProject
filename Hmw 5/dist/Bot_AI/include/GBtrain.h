@@ -19,6 +19,11 @@ private:
 	Bot* bot;
 	BotController * botController;
 
+	float getBotLife();
+	float getBotRifleAmno();
+	float getBotLaserAmno();
+	float getEnemyDistance();
+
 
 
 

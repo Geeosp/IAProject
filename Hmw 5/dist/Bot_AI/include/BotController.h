@@ -1,15 +1,15 @@
+#pragma once
 #ifndef BOTCONTROLLER_H
 #define BOTCONTROLLER_H
 
-
-
-// This is the class that you will add too
 #include "Bot.h"
 #include <list>
 #include "Timer.h"
 #include "GGraph.h"
-
-
+#include "GameManager.h"
+#include "Vect.h"
+#include "GBrain.h"
+class GBrain;
  class BotController
 {
 public:
@@ -20,10 +20,10 @@ public:
 	void render(Camera * _pCam);
 
 	int getBotID();
-
 	Bot * getBot();
 	//void printId(int x, int y);
 	void setGoal(float x, float y);
+	list<Vect*> *getPath();
 
 private:
 	Bot * bot;
@@ -33,6 +33,10 @@ private:
 	bool newGoal;
 	list<Vect*> *path;
 	bool havePath;
+	GBrain* brain;
+	Timer * timer;
+	float regulateCoolDown;
+	float regulateTimer;
 
 };
 

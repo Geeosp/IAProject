@@ -1,17 +1,15 @@
 #include "GCompositeGoal.h"
 
-void GCompositeGoal::AddSubGoal(GCompositeGoal* newGoal)
-{
-	subGoals.push_back(newGoal);
-	}
 
 
-
-GCompositeGoal::~GCompositeGoal()
-{
+GCompositeGoal::GCompositeGoal(BotController * botControl, GGoalType goalType, GGoalStatus goalStatus){
+	this->botControl = botControl;
+	this-> type= goalType;
+	this->goalStatus = goalStatus;
 }
+GCompositeGoal::	~GCompositeGoal(){
 
-
+}
 
 bool GCompositeGoal::isComplete(){
 	return goalStatus == GGoalStatus::COMPLETED;

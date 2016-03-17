@@ -53,7 +53,12 @@
     <ClInclude Include="GCompositeGoal.h">
       <Filter>GoalDrivenBehavior\Atomics</Filter>
     </ClInclude>
-    <ClInclude Include="GBtrain.h" />
+    <ClInclude Include="GBrain.h">
+      <Filter>Your Bot</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseGoal.h">
+      <Filter>GoalDrivenBehavior\Atomics</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BotController.cpp">
@@ -80,8 +85,11 @@
     <ClCompile Include="GCompositeGoal.cpp">
       <Filter>GoalDrivenBehavior\Atomics</Filter>
     </ClCompile>
-    <ClCompile Include="GBtrain.cpp">
+    <ClCompile Include="GBrain.cpp">
       <Filter>Your Bot</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseGoal.cpp">
+      <Filter>GoalDrivenBehavior\Atomics</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
