@@ -19,7 +19,7 @@ public:
 	void  addSubGoal(GCompositeGoal * newGoal);
 	char* toString();
 private:
-	 float  myangle;
+	 int  myangle;
 };
 
 

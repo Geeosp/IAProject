@@ -50,8 +50,8 @@ void GBrain::think(){
 			changeToThisGoal(goal);
 		}
 		else{
-		//	GGoalWander* goal = new GGoalWander(botController, GGoalStatus::ACTIVE);
-			//changeToThisGoal(goal);
+		GGoalWander* goal = new GGoalWander(botController, GGoalStatus::ACTIVE);
+		changeToThisGoal(goal);
 		}
 	}
 	if (hasLaser){
