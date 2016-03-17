@@ -15,6 +15,12 @@
     <Filter Include="Graph">
       <UniqueIdentifier>{a137219a-c994-44b2-9436-400dd7672557}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GoalDrivenBehavior">
+      <UniqueIdentifier>{35e60daa-4f5d-4a7d-a615-b3f469a8e42c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GoalDrivenBehavior\Atomics">
+      <UniqueIdentifier>{de6fe81a-cc32-4859-8eee-1c6dc4e9a2e6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BotController.h">
@@ -41,6 +47,13 @@
     <ClInclude Include="GEdgeHeapNode.h">
       <Filter>Graph</Filter>
     </ClInclude>
+    <ClInclude Include="GGoalTypes.h">
+      <Filter>GoalDrivenBehavior\Atomics</Filter>
+    </ClInclude>
+    <ClInclude Include="GCompositeGoal.h">
+      <Filter>GoalDrivenBehavior\Atomics</Filter>
+    </ClInclude>
+    <ClInclude Include="GBtrain.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BotController.cpp">
@@ -63,6 +76,12 @@
     </ClCompile>
     <ClCompile Include="GEdgeHeapNode.cpp">
       <Filter>Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="GCompositeGoal.cpp">
+      <Filter>GoalDrivenBehavior\Atomics</Filter>
+    </ClCompile>
+    <ClCompile Include="GBtrain.cpp">
+      <Filter>Your Bot</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

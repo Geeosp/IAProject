@@ -85,9 +85,12 @@ copy  *.h ..\dist\Bot_AI\include\.</Command>
   <ItemGroup>
     <ClInclude Include="AStar.h" />
     <ClInclude Include="BotController.h" />
+    <ClInclude Include="GBtrain.h" />
     <ClInclude Include="GEdgeHeapNode.h" />
     <ClInclude Include="GeeoHeap.h" />
     <ClInclude Include="GeeoHeapNode.h" />
+    <ClInclude Include="GCompositeGoal.h" />
+    <ClInclude Include="GGoalTypes.h" />
     <ClInclude Include="GGraph.h" />
     <ClInclude Include="GGraphEdge.h" />
     <ClInclude Include="GGraphNode.h" />
@@ -95,8 +98,10 @@ copy  *.h ..\dist\Bot_AI\include\.</Command>
   <ItemGroup>
     <ClCompile Include="AStar.cpp" />
     <ClCompile Include="BotController.cpp" />
+    <ClCompile Include="GBtrain.cpp" />
     <ClCompile Include="GEdgeHeapNode.cpp" />
     <ClCompile Include="GeeoHeap.cpp" />
+    <ClCompile Include="GCompositeGoal.cpp" />
     <ClCompile Include="GGraph.cpp" />
     <ClCompile Include="GGraphEdge.cpp" />
     <ClCompile Include="GGraphNode.cpp" />

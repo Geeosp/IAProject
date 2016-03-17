@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Libs">
+      <UniqueIdentifier>{6a8acb8e-c5a2-48c6-9571-879d9c4318b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Your Bot">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Graph">
+      <UniqueIdentifier>{a137219a-c994-44b2-9436-400dd7672557}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Goal-Agent">
+      <UniqueIdentifier>{d50a4bd1-ea96-4972-9956-1f139d10594a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Goal-Agent\Goals">
+      <UniqueIdentifier>{a193f017-2064-4f80-8331-6001b9f243de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Goal-Agent\Goal-Think">
+      <UniqueIdentifier>{c169ea62-d5ce-4d83-9427-d37e453298f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Goal-Agent\Goal Eval">
+      <UniqueIdentifier>{05538f42-5c67-4b04-819a-3631d15dc1be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Goal-Agent\Goals\atomic">
+      <UniqueIdentifier>{2cef4bae-3df8-4872-8706-19c50ecf9f00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Goal-Agent\Goals\composite">
+      <UniqueIdentifier>{70b975ba-fd9d-4268-82ce-30839867f533}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BotController.h">
+      <Filter>Your Bot</Filter>
+    </ClInclude>
+    <ClInclude Include="myGraphNode.h">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="myGraphEdge.h">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="mySearchAlgorithms.h">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="myGraph.h">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="Goal.h">
+      <Filter>Goal-Agent\Goals</Filter>
+    </ClInclude>
+    <ClInclude Include="Goal_Types.h">
+      <Filter>Goal-Agent\Goals</Filter>
+    </ClInclude>
+    <ClInclude Include="Goal_Funcs.h">
+      <Filter>Goal-Agent\Goal Eval</Filter>
+    </ClInclude>
+    <ClInclude Include="Goal_Evaluator.h">
+      <Filter>Goal-Agent\Goal Eval</Filter>
+    </ClInclude>
+    <ClInclude Include="AttackEnemy_Eval.h">
+      <Filter>Goal-Agent\Goal Eval</Filter>
+    </ClInclude>
+    <ClInclude Include="GetHealth_Eval.h">
+      <Filter>Goal-Agent\Goal Eval</Filter>
+    </ClInclude>
+    <ClInclude Include="Goal_Think.h">
+      <Filter>Goal-Agent\Goal-Think</Filter>
+    </ClInclude>
+    <ClInclude Include="Goal_MoveToPosition.h">
+      <Filter>Goal-Agent\Goals\composite</Filter>
+    </ClInclude>
+    <ClInclude Include="Goal_Composite.h">
+      <Filter>Goal-Agent\Goals\composite</Filter>
+    </ClInclude>
+    <ClInclude Include="Goal_SeekToPosition.h">
+      <Filter>Goal-Agent\Goals\atomic</Filter>
+    </ClInclude>
+    <ClInclude Include="Goal_Hunt.h">
+      <Filter>Goal-Agent\Goals\composite</Filter>
+    </ClInclude>
+    <ClInclude Include="Goal_Attack.h">
+      <Filter>Goal-Agent\Goals\composite</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BotController.cpp">
+      <Filter>Your Bot</Filter>
+    </ClCompile>
+    <ClCompile Include="myGraphEdge.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="myGraphNode.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="myGraph.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="mySearchAlgorithms.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="Goal.cpp">
+      <Filter>Goal-Agent\Goals</Filter>
+    </ClCompile>
+    <ClCompile Include="Goal_Funcs.cpp">
+      <Filter>Goal-Agent\Goal Eval</Filter>
+    </ClCompile>
+    <ClCompile Include="AttackEnemy_Eval.cpp">
+      <Filter>Goal-Agent\Goal Eval</Filter>
+    </ClCompile>
+    <ClCompile Include="GetHealth_Eval.cpp">
+      <Filter>Goal-Agent\Goal Eval</Filter>
+    </ClCompile>
+    <ClCompile Include="Goal_Think.cpp">
+      <Filter>Goal-Agent\Goal-Think</Filter>
+    </ClCompile>
+    <ClCompile Include="Goal_Composite.cpp">
+      <Filter>Goal-Agent\Goals\composite</Filter>
+    </ClCompile>
+    <ClCompile Include="Goal_MoveToPosition.cpp">
+      <Filter>Goal-Agent\Goals\composite</Filter>
+    </ClCompile>
+    <ClCompile Include="Goal_SeekToPosition.cpp">
+      <Filter>Goal-Agent\Goals\atomic</Filter>
+    </ClCompile>
+    <ClCompile Include="Goal_Hunt.cpp">
+      <Filter>Goal-Agent\Goals\composite</Filter>
+    </ClCompile>
+    <ClCompile Include="Goal_Attack.cpp">
+      <Filter>Goal-Agent\Goals\composite</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

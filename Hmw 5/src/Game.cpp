@@ -10,7 +10,7 @@
 
 #include "Bot.h"
 
-//#include "BotController_Default.h"
+#include "BotController_Default.h"
 #include "BotController.h"
 
 struct PhysicBody_Data;
@@ -34,7 +34,7 @@ struct MovingEntity_Data;
 	bool search;
 
 
-	BotController * defaultBot;
+	BotController_Default * defaultBot;
 	BotController * playerBot;
 	
 
@@ -83,7 +83,7 @@ void Game::LoadContent()
 		World::SetContactListener(contactManager);
 
 		playerBot = new BotController(GameManager::ClaimBot());
-		defaultBot = new BotController(GameManager::ClaimBot());
+		defaultBot = new BotController_Default(GameManager::ClaimBot());
 		// Timer
 		timer = new Timer;
 		timer->tic();
@@ -121,7 +121,7 @@ void Game::Update()
 
 	if (key->GetKeyState(AZUL_KEY::KEY_W))
 	{
-		Bot * bot = GameManager::getBot(playerBot->getBotID());
+		Bot * bot = GameManager::getBot(defaultBot->getBotID());
 
 		Vect dir = bot->getPos() + Vect(0.0f, 1.0f, 0.0f);
 
@@ -131,7 +131,7 @@ void Game::Update()
 
 	if (key->GetKeyState(AZUL_KEY::KEY_D))
 	{
-		Bot * bot = GameManager::getBot(playerBot->getBotID());
+		Bot * bot = GameManager::getBot(defaultBot->getBotID());
 
 		Vect dir = bot->getPos() + Vect(1.0f, 0.0f, 0.0f);
 
@@ -141,7 +141,7 @@ void Game::Update()
 
 	if (key->GetKeyState(AZUL_KEY::KEY_A))
 	{
-		Bot * bot = GameManager::getBot(playerBot->getBotID());
+		Bot * bot = GameManager::getBot(defaultBot->getBotID());
 
 		Vect dir = bot->getPos() + Vect(-1.0f, 0.0f, 0.0f);
 
@@ -150,7 +150,7 @@ void Game::Update()
 	}
 	if (key->GetKeyState(AZUL_KEY::KEY_S))
 	{
-		Bot * bot = GameManager::getBot(playerBot->getBotID());
+		Bot * bot = GameManager::getBot(defaultBot->getBotID());
 
 		Vect dir = bot->getPos() + Vect(0.0f, -1.0f, 0.0f);
 
@@ -160,7 +160,7 @@ void Game::Update()
 
 	if (key->GetKeyState(AZUL_KEY::KEY_J))
 	{
-		Bot * bot = GameManager::getBot(playerBot->getBotID());
+		Bot * bot = GameManager::getBot(defaultBot->getBotID());
 
 		angle += 2.0f;
 
@@ -168,7 +168,7 @@ void Game::Update()
 	}
 	if (key->GetKeyState(AZUL_KEY::KEY_K))
 	{
-		Bot * bot = GameManager::getBot(playerBot->getBotID());
+		Bot * bot = GameManager::getBot(defaultBot->getBotID());
 
 		angle += -2.0f;
 

@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Game.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="InputTest.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="_Libs">
+      <UniqueIdentifier>{1392bc0c-ded2-42a7-9ec1-333be4dadedd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application">
+      <UniqueIdentifier>{aef3393e-06a5-4f08-bf4a-3b6be12d1e04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\GLFW">
+      <UniqueIdentifier>{d22a518f-dd11-48ea-8247-bd82c5928233}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\GLFW\include">
+      <UniqueIdentifier>{f1613e77-99f1-482b-bccf-12b6784f3aa0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\GLFW\lib">
+      <UniqueIdentifier>{c350b52d-8efa-4eca-a258-d57d45c43245}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\SB6">
+      <UniqueIdentifier>{189a2178-2765-49df-b052-8eca24a60d61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\SB6\lib">
+      <UniqueIdentifier>{841af908-0674-4949-8aa0-292e3e84a88b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\SB6\include">
+      <UniqueIdentifier>{d2f5d78b-d9cf-4bd9-bd4e-df7522de593c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\File">
+      <UniqueIdentifier>{fb44cdb2-f236-4b3b-833e-e9e2c3af59cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\File\lib">
+      <UniqueIdentifier>{23abe339-ce80-4523-b0f0-23747e3f512f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\File\include">
+      <UniqueIdentifier>{323b20aa-e08c-4260-84b1-1e85121a9e17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\Math">
+      <UniqueIdentifier>{9fcc2c9b-3e4f-4ab2-a0c5-3099cdf90300}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\Math\lib">
+      <UniqueIdentifier>{ea7cbe8f-1aeb-4ad2-bd4e-fa300408bd5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\Math\include">
+      <UniqueIdentifier>{5d126765-1977-4213-89fb-e004f6468da5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\AzulCore">
+      <UniqueIdentifier>{d3f91089-c7e6-474d-8376-afd372d35a8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\AzulCore\lib">
+      <UniqueIdentifier>{8a854cfc-9294-4797-b476-0b2feacdd62f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\AzulCore\include">
+      <UniqueIdentifier>{60eabb98-a714-4df4-8fa1-3fb92ea55bd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\FontSystem">
+      <UniqueIdentifier>{48b09e34-ea64-47b1-b2f5-133fc71f6ee7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\FontSystem\include">
+      <UniqueIdentifier>{9149e2b9-98c6-4b4d-95c9-56d7ba9dd246}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\FontSystem\lib">
+      <UniqueIdentifier>{db53d631-b0a5-4b2d-ae1c-f56b08ff70fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\Game_Object_System">
+      <UniqueIdentifier>{f56d545f-1f8e-4149-b99c-9da0e94674fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\Box2D">
+      <UniqueIdentifier>{91a73d3b-99b4-4bb1-84fd-7641ac138cac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\Game_Object_System\include">
+      <UniqueIdentifier>{be3d7b3e-0104-43d8-8264-2bbaa665126c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\Game_Object_System\lib">
+      <UniqueIdentifier>{daef0b7c-ac58-4f72-83f0-cf1852b529eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\Box2D\include">
+      <UniqueIdentifier>{8a1b2460-ad85-44a5-a99f-fc80d39668e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\Box2D\lib">
+      <UniqueIdentifier>{32b7fcf6-0698-4d63-b0c0-983c590f1406}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\Time">
+      <UniqueIdentifier>{0255996a-7ec6-4a04-8beb-2ab29869c7a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\Time\include">
+      <UniqueIdentifier>{52b67cf9-23ed-4fe0-9c63-887ca44f8491}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\Time\lib">
+      <UniqueIdentifier>{80b2ded8-3097-4139-9954-2149d25ef06a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\Default_Bots">
+      <UniqueIdentifier>{356017f7-9eb3-4472-ad34-90f6829d3330}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\Default_Bots\include">
+      <UniqueIdentifier>{5992770b-89e8-4c13-9dca-67e32bc4d7ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\Default_Bots\lib">
+      <UniqueIdentifier>{28ca08c2-4775-4c6d-bc17-734f8ce85172}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\Bot_AI">
+      <UniqueIdentifier>{638b5212-d469-40d1-84d5-cb3c565b73c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\Bot_AI\include">
+      <UniqueIdentifier>{b6dad5ff-7f6a-41a8-ac70-2c8a03c6322d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\Bot_AI\lib">
+      <UniqueIdentifier>{f23d4607-0118-415a-b851-0dbb2c99fde4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Game.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="InputTest.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\GLFW\include\GL\glfw.h">
+      <Filter>_Libs\GLFW\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\arcball.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\object.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\sb6.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\sb6ext.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\sb6ktx.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\sb6mfile.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\shader.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\vmath.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\GL\gl3w.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\GL\glcorearb.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\GL\glext.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\GL\glxext.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\SB6\include\GL\wglext.h">
+      <Filter>_Libs\SB6\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\File\include\File.h">
+      <Filter>_Libs\File\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Math\include\Align16.h">
+      <Filter>_Libs\Math\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Math\include\Constants.h">
+      <Filter>_Libs\Math\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Math\include\Enum.h">
+      <Filter>_Libs\Math\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Math\include\MathEngine.h">
+      <Filter>_Libs\Math\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Math\include\Matrix.h">
+      <Filter>_Libs\Math\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Math\include\Util.h">
+      <Filter>_Libs\Math\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Math\include\Vect.h">
+      <Filter>_Libs\Math\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\AzulCore.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\AzulFileHdr.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\AzulHelper.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\Camera.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\DebugOut.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\Engine.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\GpuVertTypes.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_ColorByPosition.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_ColorNoTexture.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_ColorNoTextureLight.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_Sprite.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_SpriteBox.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_TextureFlat.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_TextureLight.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_WireframeAutoColor.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_WireframeConstantColor.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\Image.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\Keyboard.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\LibrarySetup.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\Model.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\Mouse.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\Rect.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\ShaderObject.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\Texture.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\AzulCore\include\TextureTGA.h">
+      <Filter>_Libs\AzulCore\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\FontSystem\include\Font.h">
+      <Filter>_Libs\FontSystem\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\FontSystem\include\Glyph.h">
+      <Filter>_Libs\FontSystem\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\FontSystem\include\SpriteFont.h">
+      <Filter>_Libs\FontSystem\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\FontSystem\include\SpriteMessage.h">
+      <Filter>_Libs\FontSystem\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Game_Object_System\include\World.h">
+      <Filter>_Libs\Game_Object_System\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Game_Object_System\include\ContactListener.h">
+      <Filter>_Libs\Game_Object_System\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Game_Object_System\include\GameObject.h">
+      <Filter>_Libs\Game_Object_System\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Game_Object_System\include\Graphics_Man.h">
+      <Filter>_Libs\Game_Object_System\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Game_Object_System\include\PhysicBody.h">
+      <Filter>_Libs\Game_Object_System\include</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomUtils.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Box2D\include\Box2D\Box2D.h">
+      <Filter>_Libs\Box2D\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Time\include\Time_Engine.h">
+      <Filter>_Libs\Time\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Time\include\Timer.h">
+      <Filter>_Libs\Time\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Default_Bots\include\BotController_Default.h">
+      <Filter>_Libs\Default_Bots\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Default_Bots\include\PriorityQueue.h">
+      <Filter>_Libs\Default_Bots\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Bot_AI\include\BotController.h">
+      <Filter>_Libs\Bot_AI\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Game_Object_System\include\GameManager.h">
+      <Filter>_Libs\Game_Object_System\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Game_Object_System\include\Bot.h">
+      <Filter>_Libs\Game_Object_System\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dist\Game_Object_System\include\Item.h">
+      <Filter>_Libs\Game_Object_System\include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\dist\GLFW\lib\GLFW_Debug.lib">
+      <Filter>_Libs\GLFW\lib</Filter>
+    </Library>
+    <Library Include="..\dist\SB6\lib\sb6_Debug.lib">
+      <Filter>_Libs\SB6\lib</Filter>
+    </Library>
+    <Library Include="..\dist\File\lib\File_Debug.lib">
+      <Filter>_Libs\File\lib</Filter>
+    </Library>
+    <Library Include="..\dist\Math\lib\MathEngine_Debug.lib">
+      <Filter>_Libs\Math\lib</Filter>
+    </Library>
+    <Library Include="..\dist\AzulCore\lib\AzulCore_Debug.lib">
+      <Filter>_Libs\AzulCore\lib</Filter>
+    </Library>
+    <Library Include="..\dist\FontSystem\lib\FontSystem_Debug.lib">
+      <Filter>_Libs\FontSystem\lib</Filter>
+    </Library>
+    <Library Include="..\dist\Box2D\lib\Box2D_Debug.lib">
+      <Filter>_Libs\Box2D\lib</Filter>
+    </Library>
+    <Library Include="..\dist\Time\lib\Time_Debug.lib">
+      <Filter>_Libs\Time\lib</Filter>
+    </Library>
+    <Library Include="..\dist\Bot_AI\lib\Bot_AI_Debug.lib">
+      <Filter>_Libs\Bot_AI\lib</Filter>
+    </Library>
+    <Library Include="..\dist\Game_Object_System\lib\Game_Object_System_Debug.lib">
+      <Filter>_Libs\Game_Object_System\lib</Filter>
+    </Library>
+    <Library Include="..\dist\Default_Bots\lib\Default_Bots_Debug.lib">
+      <Filter>_Libs\Default_Bots\lib</Filter>
+    </Library>
+  </ItemGroup>
+</Project>
